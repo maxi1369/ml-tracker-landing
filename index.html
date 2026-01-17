@@ -391,22 +391,23 @@
             </p>
             
             <!-- Email Form -->
-            <div class="max-w-md mx-auto mb-8">
-                <form id="waitlist-form-footer" class="flex flex-col sm:flex-row gap-3">
+            <div class="max-w-md mx-auto mb-6">
+                <form id="waitlist-form" class="flex flex-col sm:flex-row gap-3">
                     <input 
                         type="email" 
+                        id="email"
                         placeholder="tu@email.com" 
                         required
                         class="flex-1 px-6 py-4 text-lg rounded-lg border-2 border-gray-900 focus:outline-none focus:ring-4 focus:ring-ml-blue focus:border-ml-blue transition"
                     >
                     <button 
                         type="submit"
-                        class="bg-gray-900 text-white px-8 py-4 text-lg font-bold rounded-lg hover:bg-gray-800 transition transform hover:scale-105"
+                        class="bg-gray-900 text-white px-8 py-4 text-lg font-bold rounded-lg hover:bg-gray-800 transition transform hover:scale-105 whitespace-nowrap"
                     >
-                        🔥 Avisame Cuando Lance
+                        🔥 Avisame cuando lance
                     </button>
                 </form>
-                <p id="form-message-footer" class="mt-4 text-sm font-medium"></p>
+                <p id="form-message" class="mt-4 text-sm font-medium"></p>
             </div>
             
             <div class="space-y-2 text-sm text-gray-600">
@@ -420,7 +421,77 @@
             </p>
         </div>
     </section>
-
+    <!-- FOLLOW WITHOUT EMAIL SECTION -->
+    <section class="bg-gradient-to-b from-white to-gray-50 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6">
+                ¿No Querés Dejar Tu Email?
+            </h2>
+            <p class="text-xl text-gray-600 mb-12 max-w-2xl mx-auto">
+                Lo entiendo perfectamente. Acá tenés otras formas de seguir el proyecto:
+            </p>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- Option 1: Twitter -->
+                <a href="https://twitter.com/@MLTrackerApp" target="_blank" class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-2 border-gray-100 hover:border-blue-300">
+                    <div class="text-4xl mb-3">🐦</div>
+                    <h3 class="font-bold mb-2">Twitter/X</h3>
+                    <p class="text-sm text-gray-600">
+                        Seguime para updates en tiempo real
+                    </p>
+                    <p class="text-blue-600 text-sm font-semibold mt-3">
+                        @MLTrackerApp →
+                    </p>
+                </a>
+                
+                <!-- Option 2: GitHub -->
+                <a href="https://github.com/maxi1369/ml-tracker" target="_blank" class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-2 border-gray-100 hover:border-gray-900">
+                    <div class="text-4xl mb-3">⭐</div>
+                    <h3 class="font-bold mb-2">GitHub</h3>
+                    <p class="text-sm text-gray-600">
+                        Star el repo y seguí el desarrollo
+                    </p>
+                    <p class="text-gray-900 text-sm font-semibold mt-3">
+                        Ver código →
+                    </p>
+                </a>
+                
+                <!-- Option 3: Reddit -->
+                <a href="https://www.reddit.com/r/argentina/comments/1pwtcfd/comment/o05rjuu/" target="_blank" class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-2 border-gray-100 hover:border-orange-300">
+                    <div class="text-4xl mb-3">💬</div>
+                    <h3 class="font-bold mb-2">Reddit</h3>
+                    <p class="text-sm text-gray-600">
+                        Comentá en el post para que te avise
+                    </p>
+                    <p class="text-orange-600 text-sm font-semibold mt-3">
+                        r/argentina →
+                    </p>
+                </a>
+                
+                <!-- Option 4: Email directo -->
+                <a href="mailto:mltrackerok@gmail.com" class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition border-2 border-gray-100 hover:border-green-300">
+                    <div class="text-4xl mb-3">📧</div>
+                    <h3 class="font-bold mb-2">Email Directo</h3>
+                    <p class="text-sm text-gray-600">
+                        Escribime y te aviso manualmente
+                    </p>
+                    <p class="text-green-600 text-sm font-semibold mt-3">
+                        Contactar →
+                    </p>
+                </a>
+            </div>
+            
+            <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-6 max-w-2xl mx-auto">
+                <p class="text-sm text-gray-700">
+                    <strong>💡 Tip:</strong> Podés usar cualquiera de estas opciones. O todas. 
+                    O ninguna y simplemente volver a chequear esta página en Febrero.
+                </p>
+                <p class="text-sm text-gray-600 mt-2">
+                    La idea es que vos elijas cómo seguir el proyecto según tu nivel de comodidad.
+                </p>
+            </div>
+        </div>
+    </section>
     <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-400 py-12">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -429,10 +500,17 @@
                 <p class="text-sm">El Keepa de Mercado Libre</p>
             </div>
             
-            <div class="flex justify-center space-x-6 mb-6 text-sm">
-                <a href="#" class="hover:text-white transition">Política de Privacidad</a>
-                <a href="#" class="hover:text-white transition">Términos de Servicio</a>
-                <a href="mailto:hola@mltracker.com" class="hover:text-white transition">Contacto</a>
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mb-6 text-sm">
+                <a href="/privacy.html" class="hover:text-white transition">Política de Privacidad</a>
+                <a href="https://twitter.com/@MLTrackerApp" target="_blank" class="hover:text-white transition flex items-center">
+                    <span class="mr-2">🐦</span> Twittergg
+                </a>
+                <a href="https://github.com/maxi1369/ml-tracker" target="_blank" class="hover:text-white transition flex items-center">
+                    <span class="mr-2">⭐</span> GitHub
+                </a>
+                <a href="mailto:mltrackerok@gmail.com" class="hover:text-white transition flex items-center">
+                    <span class="mr-2">📧</span> Contacto
+                </a>
             </div>
             
             <p class="text-xs">
